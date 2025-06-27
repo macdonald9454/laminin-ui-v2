@@ -1,0 +1,23 @@
+{
+    "name": "Elvis Presley",
+    "description": "A limited edition Laminin Signature Token honoring Elvis Presley, the King of Rock and Roll. One piece equals 15 Laminin Coins.",
+    "image": "ipfs://QmPlaceholderElvis",
+    "attributes": [
+        {
+            "trait_type": "Category",
+            "value": "Musician"
+        },
+        {
+            "trait_type": "Genre",
+            "value": "Rock and Roll"
+        },
+        {
+            "trait_type": "Serial Edition",
+            "value": "1 of 100"
+        },
+        {
+            "trait_type": "Laminin Value",
+            "value": 15
+        }
+    ]
+}

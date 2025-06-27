@@ -1,0 +1,23 @@
+{
+    "name": "Michael Jordan",
+    "description": "A limited edition Laminin Signature Token honoring Michael Jordan, basketball legend and icon. One piece equals 15 Laminin Coins.",
+    "image": "ipfs://QmPlaceholderJordan",
+    "attributes": [
+        {
+            "trait_type": "Category",
+            "value": "Athlete"
+        },
+        {
+            "trait_type": "Sport",
+            "value": "Basketball"
+        },
+        {
+            "trait_type": "Serial Edition",
+            "value": "1 of 100"
+        },
+        {
+            "trait_type": "Laminin Value",
+            "value": 15
+        }
+    ]
+}
