@@ -1,5 +1,3 @@
-// src/App.js
-
 import React, { useEffect, useState } from "react";
 import { BrowserProvider, Contract, formatUnits } from "ethers";
 import lamininTokenABI from "./abi/LamininTokenV3.json";
@@ -83,26 +81,42 @@ function App() {
           backgroundColor: "black",
         }}
       >
-        <h1 style={{ textAlign: "center", color: "#ffcc00" }}>Laminin Dashboard</h1>
+        <h1 style={{ textAlign: "center", color: "#ffc600" }}>Laminin Dashboard</h1>
         <h2 style={{ color: "#00ffff" }}>
           LAM Price:{" "}
-          {lamPrice == null ? "Loading..." : `$${lamPrice.toFixed(6)} USD`}
+          {lamPrice === null ? "Loading..." : `$${lamPrice.toFixed(6)} USD`}
           {isFallbackPrice && (
             <span style={{ color: "orange", marginLeft: "10px" }}>(fallback)</span>
           )}
         </h2>
 
-        <WalletStatus address={walletAddress} />
+        {/* 🔥 Buy Button */}
+        <div style={{ marginBottom: "2rem" }}>
+          <a
+            href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xe005cb81af139d08861ed8ad80e4f87ebd144cb8"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              backgroundColor: "#ff007a",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "6px",
+              textDecoration: "none",
+              fontWeight: "bold",
+              display: "inline-block",
+            }}
+          >
+            🔥 Buy Laminin on Uniswap
+          </a>
+        </div>
 
+        <WalletStatus address={walletAddress} />
         <TokenBalance balance={balance} />
 
-        <h3 style={{ marginTop: "2rem", color: "#00ffff" }}>Transfer Tokens</h3>
         <TransferTokens signer={signer} contract={contract} />
 
-        <h3 style={{ marginTop: "2rem", color: "#00ffff" }}>Mint Tokens</h3>
         <MintTokens signer={signer} contract={contract} />
 
-        <h3 style={{ marginTop: "2rem", color: "#00ffff" }}>Pause / Unpause Controls</h3>
         <PauseControls signer={signer} contract={contract} />
       </div>
 

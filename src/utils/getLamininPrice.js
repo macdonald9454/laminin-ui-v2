@@ -1,5 +1,3 @@
-// src/utils/getLamininPrice.js
-
 export async function getLamininPrice() {
   try {
     const response = await fetch(
@@ -11,7 +9,7 @@ export async function getLamininPrice() {
     }
 
     const data = await response.json();
-    const price = data?.laminin?.usd;
+    const price = data.laminin?.usd;
 
     if (!price || isNaN(price)) {
       throw new Error("Invalid price data");
@@ -22,9 +20,9 @@ export async function getLamininPrice() {
       isFallback: false,
     };
   } catch (error) {
-    console.warn("⚠️ Falling back to manual price: $0.10");
+    console.warn("⚠️ Falling back to manual price: $0.05");
     return {
-      price: 0.1, // fallback price
+      price: 0.05, // ← Updated launch price
       isFallback: true,
     };
   }
